@@ -12,15 +12,20 @@ import Home from "../Home"
 const Routers = () => {
 
 
-//   const { adminToken } = useAuth();
+
+  // Hi, if you are reading this smile to prohibit the whole home page from user before login i can check the user status directly in my routes for more protected page
+
+
+
+  //   const { userToken } = useAuth();
 //   console.log(adminToken)
-//   const isAdmin = adminToken !== null;
+//   const isUser = userToken !== null;
   return (
     <Router>
       <Routes>
 
      
-  <Route path="/" element={<UserSignup />} />
+  <Route path="/" element={<Home />} />
       <Route path="/usersignup" element={<UserSignup />} />
       <Route path="/userlogin" element={<Userlogin />} />
       <Route path='/home' element={<Home/>}/>
@@ -28,12 +33,12 @@ const Routers = () => {
 
       </Routes>
 
-      {/* {isAdmin ? (
+      {/* {isUser ? (
         <>
          
         </>
       ) : (
-        <Route path={`${process.env.PUBLIC_URL}/`} element={<Home />} />
+        <Route path={'/} element={<Home />} />
       )} */}
     </Router>
   );
